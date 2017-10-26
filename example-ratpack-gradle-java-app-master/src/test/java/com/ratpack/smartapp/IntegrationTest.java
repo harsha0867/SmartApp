@@ -40,7 +40,7 @@ public class IntegrationTest {
 				      
 				        ReceivedResponse getResponse = httpClient.get("switches");
 				        assertEquals("text/plain;charset=UTF-8", getResponse.getHeaders().get("Content-Type"));
-				        String expectedString = "[{\"name\":\"switches\",\"value\":"+value+"}]";
+				        String expectedString = "[{\"name\":\"DSwitch\",\"value\":"+value+"}]";
 				        System.out.println("Checking the response contains "+value+" or not in switches get request - "+getResponse.getBody().getText());
 				        assertEquals(expectedString, getResponse.getBody().getText());
 				        
